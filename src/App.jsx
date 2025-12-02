@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import NavLink from './components/NavLink';
-import SectionTitle from './components/SectionTitle';
-import ProjectCard from './components/ProjectCard';
-import Contact from './components/Contact';
+import NavLink from "./components/NavLink";
+import SectionTitle from "./components/SectionTitle";
+import ProjectCard from "./components/ProjectCard";
+import Contact from "./components/Contact";
 import {
   Github,
   Linkedin,
@@ -42,7 +42,14 @@ const SKILLS = [
   {
     category: "Frontend",
     icon: Layout,
-    items: ["React", "Tailwind CSS", "Bootstrap", "HTML5", "CSS3", "JavaScript"],
+    items: [
+      "React",
+      "Tailwind CSS",
+      "Bootstrap",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+    ],
   },
   {
     category: "Backend",
@@ -260,13 +267,12 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="about" className="min-h-screen flex items-center pt-20 relative overflow-hidden">
-        {/* Background Decorative Elements */}
-        <div className="absolute top-20 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl -z-10"></div>
-
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl">
+      <section
+        id="about"
+        className="min-h-screen flex items-center pt-20 relative overflow-hidden"
+      >
+        <div className="container mx-auto p-6 w-fit border border-emerald-500 rounded-lg shadow-md shadow-emerald-500">
+          <div className="max-w-xl">
             <p className="text-emerald-400 font-mono mb-4 text-lg">
               Hi, my name is
             </p>
@@ -366,18 +372,20 @@ export default function App() {
             ))}
           </div>
 
-          {PROJECTS.length > 3 && <div className="mt-16 text-center">
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-medium group"
-            >
-              View Full Project Archive
-              <ChevronRight
-                size={16}
-                className="group-hover:translate-x-1 transition-transform"
-              />
-            </a>
-          </div>}
+          {PROJECTS.length > 3 && (
+            <div className="mt-16 text-center">
+              <a
+                href="#"
+                className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-medium group"
+              >
+                View Full Project Archive
+                <ChevronRight
+                  size={16}
+                  className="group-hover:translate-x-1 transition-transform"
+                />
+              </a>
+            </div>
+          )}
         </div>
       </section>
 
