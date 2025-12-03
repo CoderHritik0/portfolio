@@ -1,4 +1,3 @@
-import React from "react";
 import { Code2, ExternalLink, Github } from "lucide-react";
 
 export default function ProjectCard({ project }) {
@@ -11,6 +10,7 @@ export default function ProjectCard({ project }) {
           </div>
           <div className="flex gap-4">
             <a
+            target="_blank"
               href={project.github}
               className="text-slate-400 hover:text-white transition-colors"
             >
